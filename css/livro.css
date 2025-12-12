@@ -1,0 +1,158 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background: #f3f3f3;
+    color: #222;
+    padding: 30px 15px;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.livro-info {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 18px;
+    display: flex;
+    gap: 35px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+    animation: fadeIn 0.4s ease;
+}
+
+/* ===== CAPA DO LIVRO ===== */
+.livro-capa {
+    width: 260px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.18);
+}
+
+/* ===== TEXTO ===== */
+.texto h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.texto p {
+    font-size: 17px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ===== BOTÃO PADRÃO ===== */
+a.btn,
+a.btn-reservar,
+a.btn-add,
+.voltar {
+    display: inline-block;
+    padding: 12px 18px;
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: #eee;
+    color: #444;
+    transition: 0.25s;
+}
+
+a.btn:hover,
+a.btn-reservar:hover,
+a.btn-add:hover,
+.voltar:hover {
+    background: #ddd;
+    transform: translateY(-2px);
+}
+
+/* ===== BOTÃO ESPECIAL — RESERVAR ===== */
+.btn-reservar {
+    background: #0077ff;
+    border-color: #0077ff;
+    color: white;
+}
+
+.btn-reservar:hover {
+    background: #005fcc;
+}
+
+/* ===== ÁREA DE AVALIAÇÕES ===== */
+h1 {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 26px;
+}
+
+.avaliacao {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.avaliacao h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.avaliacao p {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+/* ===== BOTÃO — ADICIONAR AVALIAÇÃO ===== */
+.btn-add {
+    display: block;
+    width: fit-content;
+    margin: 25px auto;
+    background: #111;
+    color: #fff;
+    border: none;
+}
+
+.btn-add:hover {
+    background: #333;
+}
+
+/* ===== HR ===== */
+hr {
+    border: none;
+    height: 1px;
+    width: 90%;
+    margin: 25px auto;
+    background: #aaa;
+    opacity: 0.3;
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 800px) {
+    .livro-info {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .livro-capa {
+        width: 200px;
+        height: auto;
+        margin: 0 auto 20px;
+    }
+}

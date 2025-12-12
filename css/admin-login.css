@@ -1,0 +1,272 @@
+/* 
+ * admin-login.css
+ * Estilos específicos para a página de login administrativo
+ * Projeto Escolar - Bibliotec
+ */
+
+/* Container principal do admin */
+.admin-container {
+    max-width: 450px;
+    border-top: 5px solid #2c3e50;
+}
+
+/* Cabeçalho da área administrativa */
+.admin-header {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.admin-header h1 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.admin-header h1 i {
+    color: #3498db;
+}
+
+.admin-subtitle {
+    color: #7f8c8d;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Campos do formulário admin */
+.admin-container .form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.admin-container label {
+    color: #2c3e50;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.admin-container label i {
+    color: #3498db;
+    width: 20px;
+}
+
+.admin-container input {
+    border: 2px solid #bdc3c7;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.admin-container input:focus {
+    border-color: #3498db;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Texto de ajuda abaixo dos campos */
+.input-help {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Botão de login administrativo */
+.admin-btn {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    margin-top: 20px;
+    padding: 14px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.admin-btn:hover {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* Seção de informações */
+.admin-info {
+    margin: 25px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.admin-info h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-info ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.admin-info li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.admin-info li i {
+    color: #27ae60;
+}
+
+/* Links específicos para admin */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.back-to-user {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #f1f2f6;
+    transition: all 0.3s ease;
+}
+
+.back-to-user:hover {
+    background-color: #dfe4ea;
+    text-decoration: none;
+}
+
+.admin-help {
+    color: #3498db;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.admin-help:hover {
+    text-decoration: underline;
+}
+
+/* Modal de instruções */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-content h3 {
+    color: #3498db;
+    margin: 20px 0 10px;
+}
+
+.instructions {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.instructions ol, .instructions ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.modal-btn {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.modal-btn:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .admin-header h1 {
+        font-size: 20px;
+    }
+    
+    .admin-container {
+        margin-top: 30px;
+        padding: 20px;
+    }
+    
+    .modal-content {
+        margin: 20px;
+        padding: 20px;
+    }
+}
+
+/* Animações */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(52, 152, 219, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); }
+}
+
+.admin-container {
+    animation: pulse 2s infinite;
+}
