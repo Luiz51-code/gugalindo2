@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliar Livro</title>
+    <link rel="stylesheet" href="/css/avaliar.css">
+</head>
+<body>
+<header class="header">
+    <div class="navbar">
+  <div class="logo">
+            <img src="/public/Group 106.svg" alt="Bibliotec">
+        </div>
+        <nav class="menu">
+            <a href="/index.html" class="menu-item">Início</a>
+            <a href="/catalogo.html" class="menu-item">Catálogo</a>
+        </nav>
+    </div>
+</header>
+
+<main class="avaliacao-container">
+    <h2>Avaliar: <span id="nome-livro">Livro</span></h2>
+
+    <form id="avaliacao-form">
+        <label for="nota">Nota (0 a 5):</label>
+        <input type="number" id="nota" name="nota" min="0" max="5" required>
+
+        <label for="comentario">Comentário:</label>
+        <textarea id="comentario" name="comentario" placeholder="Escreva seu comentário..." required></textarea>
+
+        <button type="submit">Enviar Avaliação</button>
+    </form>
+
+    <section class="avaliacoes">
+        <h3>Avaliações</h3>
+        <div id="lista-avaliacoes"></div>
+    </section>
+</main>
+
+<script src="/js/avaliacoes.js"></script>
+</body>
+</html>

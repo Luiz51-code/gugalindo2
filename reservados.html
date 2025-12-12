@@ -1,18 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Reservados</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros Reservados — Bibliotec</title>
+    <link rel="stylesheet" href="/css/avaliacoes.css"> <!-- Usando o mesmo CSS bonito -->
 </head>
 <body>
+<header class="header">
+    <div class="navbar">
+            <div class="logo">
+            <img src="/public/Group 106.svg" alt="Bibliotec">
+        </div>
+        <nav class="menu">
+            <a href="/index.html" class="menu-item">Início</a>
+            <a href="/catalogo.html" class="menu-item">Catálogo</a>
+            <a href="/reservados.html" class="menu-item active">Livros Reservados</a>
+            <a href="/login.html" class="menu-item">Login</a>
+        </nav>
+    </div>
+</header>
 
-<div class="page-container">
-    <h2>📘 Livros Reservados</h2>
-    <div id="reservados-list" class="cards"></div>
-</div>
+<main class="avaliacao-container">
+    <h2>Meus Livros Reservados</h2>
 
-<script src="reservados.js"></script>
+    <div class="grid-livros" id="lista-reservados">
+        <!-- Livros reservados vão aparecer aqui dinamicamente -->
+    </div>
+</main>
 
+<script>
+// EXEMPLO DE LIVROS RESERVADOS (você pode adicionar mais depois)
+const livrosReservados = [
+    {
+        titulo: "Batman – A Piada Mortal",
+        imagem: "/imagens_livros/BatmanAB.webp"
+    },
+    {
+        titulo: "Invencível – Volume 1",
+        imagem: "/imagens_livros/Invencivel.jpg"
+    },
+    {
+        titulo: "PHP & MySQL",
+        imagem: "/imagens_livros/php&sql.webp"
+    }
+];
+
+const lista = document.getElementById('lista-reservados');
+
+livrosReservados.forEach(livro => {
+    const card = document.createElement('div');
+    card.classList.add('livro-card'); // reutilizando o estilo de catálogo
+    card.innerHTML = `
+        <img src="${livro.imagem}" alt="${livro.titulo}">
+        <h3>${livro.titulo}</h3>
+        <p style="color:#2a2a72; font-weight:bold;">Reservado ✅</p>
+    `;
+    lista.appendChild(card);
+});
+</script>
 </body>
 </html>

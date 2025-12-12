@@ -1,0 +1,181 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background: #f2f2f2;
+    color: #111;
+    overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: #111;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* ===== MENU ===== */
+.menu {
+    display: flex;
+    gap: 22px;
+}
+
+.menu-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.25s;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background: #222;
+    transform: translateY(-2px);
+}
+
+/* ===== CONTAINER DE AVALIAÇÃO ===== */
+.avaliacao-container {
+    max-width: 600px;
+    margin: 45px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    animation: fadeIn 0.6s ease;
+}
+
+/* ===== TÍTULOS ===== */
+h2, h3 {
+    color: #111;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ===== FORMULÁRIO ===== */
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #111;
+    outline: none;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    background: #111;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #222;
+}
+
+/* ===== LISTA DE AVALIAÇÕES ===== */
+#lista-avaliacoes {
+    margin-top: 30px;
+}
+
+.avaliacao-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    transition: 0.28s ease;
+}
+
+.avaliacao-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.22);
+}
+
+.avaliacao-item p {
+    margin: 5px 0;
+}
+
+/* ===== BOTÕES ADICIONAIS ===== */
+.btn-add, .btn-reservar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #111;
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-add:hover, .btn-reservar:hover {
+    background: #222;
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 600px) {
+    .avaliacao-container {
+        margin: 25px 15px;
+        padding: 20px;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    .menu-item {
+        font-size: 15px;
+    }
+}

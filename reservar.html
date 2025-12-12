@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Livro</title>
+    <link rel="stylesheet" href="/css/avaliar.css"> <!-- Reutiliza CSS do site -->
+</head>
+<body>
+<header class="header">
+    <div class="navbar">
+     <div class="logo">
+            <img src="/public/Group 106.svg" alt="Bibliotec">
+        </div>
+        <nav class="menu">
+            <a href="/index.html" class="menu-item">Início</a>
+            <a href="/catalogo.html" class="menu-item">Catálogo</a>
+            <a href="/reservados.html" class="menu-item">Livros Reservados</a>
+        </nav>
+    </div>
+</header>
+
+<main class="avaliacao-container">
+    <h2>Reservar: <span id="nome-livro"></span></h2>
+
+    <form id="reserva-form">
+        <label for="nome">Seu Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+        <label for="email">Seu E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+        <button type="submit">Reservar Livro</button>
+    </form>
+
+    <section id="lista-reservas">
+        <h3>Reservas já realizadas</h3>
+    </section>
+</main>
+
+<script src="/js/reservas.js"></script>
+</body>
+</html>

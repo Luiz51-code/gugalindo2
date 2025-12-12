@@ -71,6 +71,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     animation: fadeIn 0.7s ease-in-out;
+    background: #000; /* remove qualquer borda branca */
 }
 
 @keyframes fadeIn {
@@ -85,27 +86,26 @@ body {
     will-change: transform;
 }
 
-/* ======== SLIDE COM ZOOM-OUT REAL ======== */
+/* ======== SLIDE COM ZOOM-OUT ======== */
 .slide {
     flex: 0 0 100%;
     width: 100%;
     height: 100%;
+    object-fit: contain;   /* mantém a imagem inteira */
+    background-color: #000;
+    display: block;
 
-    object-fit: contain;   /* MOSTRA A IMAGEM INTEIRA */
-    background-color: #000; /* fundo atrás da imagem */
-
-    transform: scale(0.95); /* zoom-out bonito */
+    /* efeito zoom-out bonito */
+    transform: scale(0.95);
     transform-origin: center;
 
-    display: block;
     filter: brightness(0.95);
     transition: transform 0.4s ease, filter 0.3s, opacity 0.4s ease;
 }
 
-
 .slide:hover {
     filter: brightness(1);
-    transform: scale(0.92); /* leve aproximação no hover */
+    transform: scale(0.92);
 }
 
 /* ======== BOTÕES CARROSSEL ======== */

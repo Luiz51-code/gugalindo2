@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename);
 app.use(cors());
 app.use(bodyParser.json());
 
-// Rota para a HOME (index.html na raiz do projeto)
+// Rota para a HOME (index.html)
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 });
@@ -31,6 +31,11 @@ app.get("/recomendados", (req, res) => {
 // Rota para login
 app.get("/login", (req, res) => {
     res.sendFile(path.join(__dirname, "login.html"));
+});
+
+// ✅ ROTA PARA CADASTRO (NOVA)
+app.get("/cadastro", (req, res) => {
+    res.sendFile(path.join(__dirname, "cadastro.html"));
 });
 
 // Servir arquivos estáticos (imagens, CSS, JS)
